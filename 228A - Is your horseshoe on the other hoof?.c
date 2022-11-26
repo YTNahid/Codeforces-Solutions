@@ -3,11 +3,7 @@
 #include <string.h>
  
 int main() {
-    #ifndef ONLINE_JUDGE
-        freopen("input.txt", "r", stdin); 
-        freopen("output.txt", "w", stdout);
-    #endif
-
+ 
     long arr[4],i,j, count = 0;
 
     for(i = 0; i < 4; i++) {
