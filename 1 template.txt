@@ -85,3 +85,25 @@ int main()
 
     return 0;
 }
+
+Windows:
+{
+    "cmd": ["g++.exe", "-std=c++17", "${file}",
+            "-o", "${file_base_name}.exe",
+            "&&", "${file_base_name}.exe<input.txt>output.txt"],
+    "shell":true,
+    "working_dir":"$file_path",
+    "selector":"source.cpp"
+}
+
+Linux:
+{
+    "cmd": "g++ -std=c++17 \"${file}\" -o \"${file_base_name}\" && ./\"${file_base_name}\" < input.txt > output.txt",
+    "shell": true,
+    "working_dir": "${file_path}",
+    "selector": "source.cpp"
+}
+
+
+
+
